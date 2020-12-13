@@ -1,0 +1,41 @@
+doctype html
+html
+    head
+        title SEMrush Test task
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+    body.page
+        .page__container
+            .page__inner
+                .block
+                    .block__input
+                        include blocks/input/input
+                        +input({
+                            title: "Стоимость недвижимости"
+                        })
+                        +input({
+                            title: "Первоначальный взнос"
+                        })
+                        +input({
+                            title: "Срок кредита"
+                        })
+                        +input({
+                            title: "Процентная ставка"
+                        })
+                        .block__buttons
+                            .button.button--save Save
+                            .button.button--clear Clear
+                .block
+                    .block__result
+                        include blocks/result/result
+                        +result({
+                            title: "Ежемесячный платёж"
+                        })
+                        +result({
+                            title: "Необходимый доход"
+                        })
+                        +result({
+                            title: "Переплата"
+                        })
+                        +result({
+                            title: "Тело кредита"
+                        })
