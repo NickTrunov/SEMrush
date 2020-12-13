@@ -10,16 +10,20 @@ html
                     .block__input
                         include blocks/input/input
                         +input({
-                            title: "Стоимость недвижимости"
+                            title: "Стоимость недвижимости",
+                            type: "W"
                         })
                         +input({
-                            title: "Первоначальный взнос"
+                            title: "Первоначальный взнос",
+                            type: "A"
                         })
                         +input({
-                            title: "Срок кредита"
+                            title: "Срок кредита",
+                            type: "n"
                         })
                         +input({
-                            title: "Процентная ставка"
+                            title: "Процентная ставка",
+                            type: "I"
                         })
                         .block__buttons
                             .button.button--save Save
@@ -28,14 +32,18 @@ html
                     .block__result
                         include blocks/result/result
                         +result({
-                            title: "Ежемесячный платёж"
+                            title: "Ежемесячный платёж",
+                            type: "P"
                         })
                         +result({
-                            title: "Необходимый доход"
+                            title: "Необходимый доход",
+                            type: "D"
                         })
                         +result({
-                            title: "Переплата"
+                            title: "Переплата",
+                            type: "L"
                         })
                         +result({
-                            title: "Тело кредита"
+                            title: "Тело кредита",
+                            type: "C"
                         })

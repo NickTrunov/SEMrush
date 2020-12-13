@@ -1,4 +1,4 @@
 mixin result(data)
     .result
         .result__title= data.title
-        .result__value 0 ₽
+        .result__value(class=data.type) 0 ₽
