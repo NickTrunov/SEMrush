@@ -56,6 +56,7 @@
     outline: none;
     cursor: pointer;
     user-select: none;
+    transition: All 0.5s ease;
 
     &--save {
         color: #fff;
