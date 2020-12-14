@@ -32,3 +32,11 @@ $("input").keyup(function () {
     if (D > 0) $(".D").text(Math.round(D) + " ₽");
     else $(".D").text("0 ₽")
 }).keyup();
+
+$(".button--clear").on('click', function () {
+    $("input").val("");
+    $(".C").text("0 ₽")
+    $(".P").text("0 ₽")
+    $(".L").text("0 ₽")
+    $(".D").text("0 ₽")
+});

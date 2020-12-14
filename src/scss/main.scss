@@ -49,12 +49,13 @@
 }
 
 .button {
+    display: inline-block;
     padding: 5px 15px;
     border: 1px solid #d3d8d9;
     border-radius: 2px;
     outline: none;
     cursor: pointer;
-    display: inline-block;
+    user-select: none;
 
     &--save {
         color: #fff;
