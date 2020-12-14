@@ -23,8 +23,12 @@ $("input").keyup(function () {
     L = P * n * 12 - C;
     D = 5 * P / 3;
 
-    $(".C").text(C + " ₽");
+    if (C > 0) $(".C").text(C + " ₽");
+    else $(".C").text("0 ₽")
     if (P > 0) $(".P").text(Math.round(P) + " ₽");
+    else $(".P").text("0 ₽")
     if (L > 0) $(".L").text(Math.round(L) + " ₽");
+    else $(".L").text("0 ₽")
     if (D > 0) $(".D").text(Math.round(D) + " ₽");
+    else $(".D").text("0 ₽")
 }).keyup();
