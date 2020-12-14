@@ -16,8 +16,19 @@ $('.W').val(W);
 $('.A').val(A);
 $('.I').val(I);
 $('.n').val(n);
+if (C > 0) $('.C').text(C + ' ₽');
+else $('.C').text('0 ₽')
+if (P > 0) $('.P').text(Math.round(P) + ' ₽');
+else $('.P').text('0 ₽')
+if (L > 0) $('.L').text(Math.round(L) + ' ₽');
+else $('.L').text('0 ₽')
+if (D > 0) $('.D').text(Math.round(D) + ' ₽');
+else $('.D').text('0 ₽')
+$('.button--save').text(localStorage.getItem('buttonSave'));
 
 $('input').keyup(function () {
+    localStorage.setItem('buttonSave', 'Save');
+    $('.button--save').text(localStorage.getItem('buttonSave'));
     W = $('.W').val();
     A = $('.A').val();
     I = $('.I').val();
@@ -36,7 +47,7 @@ $('input').keyup(function () {
     else $('.L').text('0 ₽')
     if (D > 0) $('.D').text(Math.round(D) + ' ₽');
     else $('.D').text('0 ₽')
-}).keyup();
+});
 
 $('.button--clear').on('click', function () {
     $('input').val('');
@@ -44,7 +55,17 @@ $('.button--clear').on('click', function () {
     $('.P').text('0 ₽')
     $('.L').text('0 ₽')
     $('.D').text('0 ₽')
+    W = '';
+    A = '';
+    n = '';
+    I = '';
+    C = '';
+    P = '';
+    L = '';
+    D = '';
     localStorage.clear();
+    localStorage.setItem('buttonSave', 'Save');
+    $('.button--save').text(localStorage.getItem('buttonSave'));
 });
 
 $('.button--save').on('click', function () {
@@ -56,4 +77,6 @@ $('.button--save').on('click', function () {
     localStorage.setItem('P', P);
     localStorage.setItem('L', L);
     localStorage.setItem('D', D);
+    localStorage.setItem('buttonSave', 'Saved');
+    $('.button--save').text(localStorage.getItem('buttonSave'));
 });

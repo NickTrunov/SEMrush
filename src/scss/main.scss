@@ -49,9 +49,11 @@
 }
 
 .button {
+    width: 95px;
+    text-align: center;
     display: inline-block;
     padding: 5px 15px;
-    border: 1px solid #d3d8d9;
+    border: none;
     border-radius: 2px;
     outline: none;
     cursor: pointer;
@@ -62,10 +64,27 @@
         color: #fff;
         background-color: #50ae33;
         border-color: #50ae33;
-    }  
+        
+        &:hover {
+            background-color: rgba($color: #50ae33, $alpha: 0.75);
+        }
+
+        &:active {
+            background-color: #3a8025;
+        }
+    }
 
     &--clear {
         color: #a3a3a3;
         background-color: #f6f7f7;
+        
+        &:hover {
+            background-color: rgba($color: #f6f7f7, $alpha: 0.75);
+        }
+
+        &:active {
+            background-color: #959696;
+            color: #fff;
+        }
     }
 }
