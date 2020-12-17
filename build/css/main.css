@@ -1,6 +1,6 @@
 .input{margin-bottom:10px}.input__title{padding:10px 0}.input__value{width:250px;height:25px;outline:none;border:1px solid #d3d8d9;border-radius:2px;position:relative}
 
-.result{width:230px;padding:10px}.result__value{font-size:40px}
+.result{width:230px;padding:10px}.result__value{font-size:30px}
 
 :root{height:100%;font-weight:400;font-family:Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.page{height:inherit;margin:0;background-color:#555;font-size:20px}.page__container{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;height:inherit}.page__inner{margin:auto 0;display:flex;flex-wrap:wrap;padding:10px}.block{margin:0 auto;padding:25px}.block__result{margin-top:43px;max-width:500px;background-color:#ebebeb;border-radius:5px;display:flex;flex-wrap:wrap}.block__buttons{margin-top:25px}.button{width:95px;text-align:center;display:inline-block;padding:5px 15px;border:none;border-radius:2px;outline:none;cursor:pointer;user-select:none;transition:All 0.5s ease}.button--save{color:#fff;background-color:#50ae33;border-color:#50ae33}.button--save:hover{background-color:rgba(80,174,51,0.75)}.button--save:active{background-color:#3a8025}.button--clear{color:#a3a3a3;background-color:#f6f7f7}.button--clear:hover{background-color:rgba(246,247,247,0.75)}.button--clear:active{background-color:#959696;color:#fff}
 
