@@ -12,10 +12,15 @@ var C = localStorage.getItem('C');
 var P = localStorage.getItem('P');
 var L = localStorage.getItem('L');
 var D = localStorage.getItem('D');
-$('.W').val(W);
-$('.A').val(A);
-$('.I').val(I);
-$('.n').val(n);
+
+if (W > 0) $('.W').val(W);
+else $('.W').val('');
+if (A > 0) $('.A').val(A);
+else $('.A').val('');
+if (n > 0) $('.n').val(n);
+else $('.n').val('');
+if (I > 0) $('.I').val(I);
+else $('.I').val('');
 if (C > 0) $('.C').text(C + ' ₽');
 else $('.C').text('0 ₽')
 if (P > 0) $('.P').text(Math.round(P) + ' ₽');
@@ -24,11 +29,11 @@ if (L > 0) $('.L').text(Math.round(L) + ' ₽');
 else $('.L').text('0 ₽')
 if (D > 0) $('.D').text(Math.round(D) + ' ₽');
 else $('.D').text('0 ₽')
+
 $('.button--save').text(localStorage.getItem('buttonSave'));
 
 $('input').keyup(function () {
-    localStorage.setItem('buttonSave', 'Save');
-    $('.button--save').text(localStorage.getItem('buttonSave'));
+    $('.button--save').text('Save');
     W = $('.W').val();
     A = $('.A').val();
     I = $('.I').val();
@@ -47,6 +52,8 @@ $('input').keyup(function () {
     else $('.L').text('0 ₽')
     if (D > 0) $('.D').text(Math.round(D) + ' ₽');
     else $('.D').text('0 ₽')
+
+    if (W == localStorage.getItem('W') && A == localStorage.getItem('A') && I == localStorage.getItem('I') && n == localStorage.getItem('n')) $('.button--save').text('Saved');
 });
 
 $('.button--clear').on('click', function () {
