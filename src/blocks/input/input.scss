@@ -1,5 +1,6 @@
 .input {
     margin-bottom: 10px;
+    position: relative;
 
     &__title {
         padding: 10px 0;
@@ -11,6 +12,12 @@
         outline: none;
         border: 1px solid #d3d8d9;
         border-radius: 2px;
-        position: relative;
+    }
+    
+    &__unit {
+        position: absolute;
+        top: 45px;
+        right: 10px;
+        user-select: none;
     }
 }

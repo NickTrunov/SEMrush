@@ -11,11 +11,13 @@ html
                         include blocks/input/input
                         +input({
                             title: "Стоимость недвижимости",
-                            type: "W"
+                            type: "W",
+                            unit: '₽'
                         })
                         +input({
                             title: "Первоначальный взнос",
-                            type: "A"
+                            type: "A",
+                            unit: '₽'
                         })
                         include blocks/anchor/anchor
                         +anchor({percent: 10})
@@ -25,11 +27,13 @@ html
                         +anchor({percent: 30})
                         +input({
                             title: "Срок кредита",
-                            type: "n"
+                            type: "n",
+                            unit: 'лет'
                         })
                         +input({
                             title: "Процентная ставка",
-                            type: "I"
+                            type: "I",
+                            unit: '%'
                         })
                         .block__buttons
                             .button.button--save Save

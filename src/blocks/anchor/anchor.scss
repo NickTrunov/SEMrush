@@ -3,11 +3,12 @@
     background-color: #d9d9d9;
     border-radius: 5px;
     text-align: center;
-    font-size: 18px;
+    font-size: 15px;
     width: 46px;
     cursor: pointer;
     user-select: none;
     transition: All 0.25s ease;
+    padding: 5px 0;
 
     &--active {
         color: #fff;
