@@ -28,6 +28,8 @@ calcCredit();
 
 if (localStorage.getItem('buttonSave') != null) $('.button--save').text(localStorage.getItem('buttonSave'));
 
+
+
 $('input').keyup(function () {
     W = $('.W').val();
     A = $('.A').val();
@@ -98,7 +100,7 @@ function calcCredit() {
     var L = P * n * 12 - C;
     var D = 5 * P / 3;
 
-    if (n == '') {
+    if (n < 1) {
         P = '';
         D = '';
     }

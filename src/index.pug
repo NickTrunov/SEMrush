@@ -28,12 +28,14 @@ html
                         +input({
                             title: "Срок кредита",
                             type: "n",
-                            unit: 'лет'
+                            unit: 'лет',
+                            length: 2
                         })
                         +input({
                             title: "Процентная ставка",
                             type: "I",
-                            unit: '%'
+                            unit: '%',
+                            length: 2
                         })
                         .block__buttons
                             .button.button--save Save
