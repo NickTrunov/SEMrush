@@ -74,6 +74,9 @@ $('input').bind("change keyup input click", function () {
     if (this.value.match(/[^0-9]/g)) {
         this.value = this.value.replace(/[^0-9]/g, '');
     }
+    if (this.value.match(/[^0-9]|^0{1}/g)) {
+        this.value = '';
+    }
 });
 
 $('.anchor').on('mousedown', function () {
