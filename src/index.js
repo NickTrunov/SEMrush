@@ -41,7 +41,7 @@ function calcCredit () {
 
 calcCredit();
 
-$('.button--save').text(localStorage.getItem('buttonSave'));
+if (localStorage.getItem('buttonSave') != null) $('.button--save').text(localStorage.getItem('buttonSave'));
 
 $('input').keyup(function () {
     $('.button--save').text('Save');
@@ -66,8 +66,7 @@ $('.button--clear').on('click', function () {
     n = '';
     I = '';
     localStorage.clear();
-    localStorage.setItem('buttonSave', 'Save');
-    $('.button--save').text(localStorage.getItem('buttonSave'));
+    $('.button--save').text('Save');
 });
 
 $('.button--save').on('click', function () {
