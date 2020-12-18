@@ -11,6 +11,7 @@ var I = localStorage.getItem('I');
 var activeAnchor = localStorage.getItem('activeAnchor');
 var isActive = localStorage.getItem('isActive');
 
+if (localStorage.getItem('buttonSave') != null) $('.button--save').text(localStorage.getItem('buttonSave'));
 if (localStorage.getItem('activeAnchor') > 0) {
     setActiveAnchor(localStorage.getItem('activeAnchor'));
 }
@@ -26,18 +27,14 @@ else $('.I').val('');
 
 calcCredit();
 
-if (localStorage.getItem('buttonSave') != null) $('.button--save').text(localStorage.getItem('buttonSave'));
-
-
-
 $('input').keyup(function () {
     W = $('.W').val();
     A = $('.A').val();
     I = $('.I').val();
     n = $('.n').val();
     if (activeAnchor > 0) {
-        if ($(this).hasClass('W')) anchorAdjust(activeAnchor);
-        if ($(this).hasClass('A')) anchorAdjustReverse(activeAnchor);
+        if ($(this).hasClass('W')) anchorAdjust();
+        if ($(this).hasClass('A')) anchorAdjustReverse();
     }
 
     calcCredit();
@@ -87,7 +84,7 @@ $('.anchor').on('mousedown', function () {
         if ($(this).hasClass('anchor--20')) activeAnchor = '20';
         if ($(this).hasClass('anchor--25')) activeAnchor = '25';
         if ($(this).hasClass('anchor--30')) activeAnchor = '30';
-        anchorAdjust(activeAnchor);
+        anchorAdjust();
         calcCredit();
     }
 
@@ -122,9 +119,9 @@ function setActiveAnchor(data) {
     $('.anchor--'+data).addClass('anchor--active');
 }
 
-function anchorAdjust(data) {
+function anchorAdjust() {
     if ($('.W').val() > 0) {
-        $('.A').val(Math.round(W / 100 * data));
+        $('.A').val(Math.round(W / 100 * activeAnchor));
         A = $('.A').val();
     }
     else {
@@ -133,9 +130,9 @@ function anchorAdjust(data) {
     }
 }
 
-function anchorAdjustReverse(data) {
+function anchorAdjustReverse() {
     if ($('.A').val() > 0) {
-        $('.W').val(Math.round(A / data * 100));
+        $('.W').val(Math.round(A / activeAnchor * 100));
         W = $('.W').val();
     }
     else {
