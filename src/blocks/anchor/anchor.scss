@@ -1,0 +1,16 @@
+.anchor {
+    display: inline-block;
+    background-color: #d9d9d9;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+    width: 46px;
+    cursor: pointer;
+    user-select: none;
+    transition: All 0.25s ease;
+
+    &--active {
+        color: #fff;
+        background-color: #2a94e1;
+    }
+}

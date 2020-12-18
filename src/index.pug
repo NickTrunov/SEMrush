@@ -17,6 +17,12 @@ html
                             title: "Первоначальный взнос",
                             type: "A"
                         })
+                        include blocks/anchor/anchor
+                        +anchor({percent: 10})
+                        +anchor({percent: 15})
+                        +anchor({percent: 20})
+                        +anchor({percent: 25})
+                        +anchor({percent: 30})
                         +input({
                             title: "Срок кредита",
                             type: "n"

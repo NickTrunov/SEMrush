@@ -1,3 +1,5 @@
+.anchor{display:inline-block;background-color:#d9d9d9;border-radius:5px;text-align:center;font-size:18px;width:46px;cursor:pointer;user-select:none;transition:All 0.25s ease}.anchor--active{color:#fff;background-color:#2a94e1}
+
 .input{margin-bottom:10px}.input__title{padding:10px 0}.input__value{width:250px;height:25px;outline:none;border:1px solid #d3d8d9;border-radius:2px;position:relative}
 
 .result{width:230px;padding:10px}.result__value{font-size:30px}
