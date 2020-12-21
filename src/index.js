@@ -16,9 +16,9 @@ if (localStorage.getItem('activeAnchor') > 0) {
     setActiveAnchor(localStorage.getItem('activeAnchor'));
 }
 
-if (W > 0) $('.W').val(W);
+if (W > 0) $('.W').val(String(W).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 '));
 else $('.W').val('');
-if (A > 0) $('.A').val(A);
+if (A > 0) $('.A').val(String(A).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 '));
 else $('.A').val('');
 if (n > 0) $('.n').val(n);
 else $('.n').val('');
@@ -28,8 +28,8 @@ else $('.I').val('');
 calcCredit();
 
 $('input').keyup(function () {
-    W = $('.W').val();
-    A = $('.A').val();
+    W = $('.W').val().replace(/\s/g, '');
+    A = $('.A').val().replace(/\s/g, '');
     I = $('.I').val();
     n = $('.n').val();
     if (activeAnchor > 0) {
@@ -39,6 +39,14 @@ $('input').keyup(function () {
 
     calcCredit();
     checkSaveButton();
+});
+
+$('.W').on('blur', function () {
+    $('.W').val(String(W).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 '));
+});
+
+$('.A').on('blur', function () {
+    $('.A').val(String(A).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 '));
 });
 
 $('.button--clear').on('click', function () {
@@ -120,25 +128,23 @@ function setActiveAnchor(data) {
 }
 
 function anchorAdjust() {
-    if ($('.W').val() > 0) {
-        $('.A').val(Math.round(W / 100 * activeAnchor));
-        A = $('.A').val();
+    if (W > 0) {
+        A = Math.round(W / 100 * activeAnchor);
     }
     else {
-        $('.A').val('');
         A = '';
     }
+    $('.A').val(String(A).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 '));
 }
 
 function anchorAdjustReverse() {
-    if ($('.A').val() > 0) {
-        $('.W').val(Math.round(A / activeAnchor * 100));
-        W = $('.W').val();
+    if (A > 0) {
+        W = Math.round(A / activeAnchor * 100);
     }
     else {
-        $('.W').val('');
         W = '';
     }
+    $('.W').val(String(W).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 '));
 }
 
 function checkSaveButton() {
