@@ -36,15 +36,17 @@
 
     &__result {
         margin-top: 43px;
-        max-width: 500px;
+        max-width: 520px;
         background-color: #ebebeb;
         border-radius: 5px;
         display: flex;
         flex-wrap: wrap;
+        white-space: nowrap;
     }
 
     &__buttons {
         margin-top: 25px;
+        white-space: nowrap;
     }
 }
 

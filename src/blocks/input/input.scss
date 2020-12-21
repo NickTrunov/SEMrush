@@ -18,6 +18,9 @@
         position: absolute;
         top: 45px;
         right: 10px;
-        user-select: none;
+        -webkit-user-select: none;
+           -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
     }
 }
